@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/Hero';
-import { ValuesSection } from './components/ValuesSection';
-import { PracticeAreas } from './components/PracticeAreas';
-import { AttorneysList } from './components/AttorneysList';
-import { AttorneySection } from './components/AttorneySection';
-import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { ContactModal } from './components/ContactModal';
+import { ScrollToTop } from './components/ScrollToTop';
+
+import { HomePage } from './pages/HomePage';
+import { PracticeAreasPage } from './pages/PracticeAreasPage';
+import { AttorneysPage } from './pages/AttorneysPage';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
 
 export const App: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,39 +27,45 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-[#187CE7] selection:text-white">
-      {/* Fixed Sticky Header Navbar */}
-      <Navbar onContactClick={() => handleOpenContact()} />
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen bg-white flex flex-col font-sans selection:bg-[#187CE7] selection:text-white">
+        {/* Fixed Sticky Header Navbar */}
+        <Navbar onContactClick={() => handleOpenContact()} />
 
-      {/* Main Content Area */}
-      <main className="flex-grow">
-        {/* Exact Hero Section from Reference Screenshot */}
-        <Hero onContactClick={() => handleOpenContact()} />
+        {/* Dynamic Route Pages */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<HomePage onOpenContact={handleOpenContact} />} />
+            <Route
+              path="/practice-areas"
+              element={<PracticeAreasPage onContactClick={(p) => handleOpenContact(p)} />}
+            />
+            <Route
+              path="/attorneys"
+              element={<AttorneysPage onOpenContact={handleOpenContact} />}
+            />
+            <Route
+              path="/about"
+              element={<AboutPage onOpenContact={() => handleOpenContact()} />}
+            />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<HomePage onOpenContact={handleOpenContact} />} />
+          </Routes>
+        </main>
 
-        {/* Value, Communication, Results Detailed Pillars */}
-        <ValuesSection />
+        {/* Global Legal Footer */}
+        <Footer />
 
-        {/* Practice Areas */}
-        <PracticeAreas onSelectPractice={(practice) => handleOpenContact(practice)} />
-
-        {/* 6 Lawyers Team List with Email, Phone, Twitter */}
-        <AttorneysList onConsultLawyer={(lawyerName) => handleOpenContact(undefined, lawyerName)} />
-
-        {/* Lead Managing Partner Spotlight */}
-        <AttorneySection onContactClick={() => handleOpenContact(undefined, 'David A. Thomas')} />
-
-        {/* Direct Contact & Inquiry Section */}
-        <ContactSection onRequestModal={() => handleOpenContact()} />
-      </main>
-      <Footer />
-
-      <ContactModal
-        isOpen={isModalOpen}
-        onClose={handleCloseContact}
-        defaultPractice={selectedPractice}
-        defaultAttorney={selectedAttorney}
-      />
-    </div>
+        {/* Interactive Case Consultation Modal */}
+        <ContactModal
+          isOpen={isModalOpen}
+          onClose={handleCloseContact}
+          defaultPractice={selectedPractice}
+          defaultAttorney={selectedAttorney}
+        />
+      </div>
+    </BrowserRouter>
   );
 };
 
