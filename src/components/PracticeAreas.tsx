@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scroll, Shield, Scale, Users, ChevronRight, Landmark } from 'lucide-react';
+import { Scroll, Scale, ChevronRight, Landmark } from 'lucide-react';
 
 const practices = [
   {
