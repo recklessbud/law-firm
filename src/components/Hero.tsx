@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5 text-[#187CE7] mb-1">
                 <Scale className="w-4 h-4" />
-                <span className="font-extrabold text-lg sm:text-2xl text-[#0B2238]">10+</span>
+                <span className="font-extrabold text-lg sm:text-2xl text-[#0B2238]">20+</span>
               </div>
               <span className="text-[11px] sm:text-xs font-semibold text-slate-600 tracking-wide uppercase">
                 Years in Probate & Estates
@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5 text-[#187CE7] mb-1">
                 <Award className="w-4 h-4" />
-                <span className="font-extrabold text-lg sm:text-2xl text-[#0B2238]">$100K+</span>
+                <span className="font-extrabold text-lg sm:text-2xl text-[#0B2238]">$10M+</span>
               </div>
               <span className="text-[11px] sm:text-xs font-semibold text-slate-600 tracking-wide uppercase">
                 Family Assets Protected

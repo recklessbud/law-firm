@@ -35,8 +35,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] py-3 sm:py-4 border-b border-slate-100'
-          : 'bg-white py-4 sm:py-5'
+          ? "bg-white/95 backdrop-blur-md shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] py-3 sm:py-4 border-b border-slate-100"
+          : "bg-white py-4 sm:py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +64,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
                   className={`text-xs xl:text-[13px] font-bold tracking-wider uppercase transition-all duration-200 relative py-1 ${
                     isActive
                       ? 'text-[#0B2238] font-extrabold after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2.5px] after:bg-[#0B2238] after:rounded-full'
-                      : 'text-[#0B2238] hover:text-[#187CE7]'
+                      : "text-[#0B2238] hover:text-[#187CE7]"
                   }`}
                 >
                   {item.label}
@@ -75,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             {/* Direct Phone Call Button */}
             <a
               href="tel:+233241234567"
-              className="inline-flex items-center justify-center bg-[#187CE7] hover:bg-[#0f6bd3] text-white text-xs xl:text-[13px] font-bold tracking-wider px-6 py-2.5 rounded-full transition-all duration-200 shadow-[0_3px_12px_rgba(24,124,231,0.25)] hover:shadow-[0_4px_16px_rgba(24,124,231,0.4)] hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center justify-center bg-[#187CE7] hover:bg-[#0f6bd3] text-white text-xs xl:text-[13px] font-bold tracking-wider px-6 py-2.5 rounded-full transition-all duration-200 shadow-[0_3px_12px_rgba(24,124,231,0.25)] hover:-translate-y-0.5 active:translate-y-0"
             >
               <span className="tabular-nums">0241234567</span>
             </a>
@@ -129,8 +129,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
                   }}
                   className={`flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-bold tracking-wider uppercase transition-colors ${
                     isActive
-                      ? 'bg-slate-50 text-[#187CE7] border-l-4 border-[#187CE7]'
-                      : 'text-[#0B2238] hover:bg-slate-50 hover:text-[#187CE7]'
+                      ? "bg-slate-50 text-[#187CE7] border-l-4 border-[#187CE7]"
+                      : "text-[#0B2238] hover:bg-slate-50 hover:text-[#187CE7]"
                   }`}
                 >
                   <span>{item.label}</span>
@@ -142,7 +142,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             <div className="pt-4 border-t border-slate-100 flex flex-col gap-3">
               <a
                 href="tel:+233241234567"
-                className="w-full flex items-center justify-center gap-2 bg-[#187CE7] hover:bg-[#0f6bd3] text-white font-bold text-sm py-3 rounded-full shadow-md transition-all"
+                className="w-full flex items-center justify-center gap-2 bg-[#187CE7] hover:bg-[#0f6bd3] text-white font-bold text-sm py-3 rounded-full  transition-all"
               >
                 <Phone className="w-4 h-4" />
                 <span>Call 0241234567</span>

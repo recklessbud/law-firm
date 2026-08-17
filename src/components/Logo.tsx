@@ -7,7 +7,10 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ className = '' }) => {
   return (
-    <a href="#" className={`group flex items-center gap-3 select-none no-underline ${className}`}>
+    <a
+      href="#"
+      className={`group flex items-center gap-3 select-none no-underline ${className}`}
+    >
       {/* Brand Geometric Monogram Icon */}
       <div className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-105">
         <svg
@@ -18,25 +21,22 @@ export const Logo: React.FC<LogoProps> = ({ className = '' }) => {
         >
           {/* Outer Square Border / Accent */}
           <rect width="44" height="44" rx="3" fill="#0B2238" />
-          
+
           {/* Left Bright Blue Accent Bar */}
           <rect x="4" y="16" width="10" height="12" rx="1.5" fill="#187CE7" />
-          
+
           {/* Stylized White 'T' Character Structure */}
-          <path
-            d="M8 10H36V16H25V36H19V16H8V10Z"
-            fill="white"
-          />
+          <path d="M8 10H36V16H25V36H19V16H8V10Z" fill="white" />
         </svg>
       </div>
 
       {/* Brand Text */}
       <div className="flex items-baseline tracking-tight">
         <span className="font-extrabold text-xl sm:text-2xl tracking-wide text-[#0B2238] uppercase">
-          Banku Law
+          Richard Weaver
         </span>
         <span className="font-semibold text-xs sm:text-sm text-[#0B2238] ml-1.5 tracking-wider uppercase opacity-90">
-          LLC
+          P.C.
         </span>
       </div>
     </a>

@@ -22,7 +22,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
             </h2>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
-              Speak directly with our probate and inheritance attorneys to evaluate your rights, protect estate assets, and formulate an effective legal strategy.
+              Speak directly with our probate and inheritance attorneys to
+              evaluate your rights, protect estate assets, and formulate an
+              effective legal strategy.
             </p>
 
             <div className="space-y-4">
@@ -34,7 +36,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Direct Firm Line</div>
+                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                    Direct Firm Line
+                  </div>
                   <div className="text-lg sm:text-xl font-bold tracking-wide text-white group-hover:text-[#187CE7] transition-colors">
                     0241234567
                   </div>
@@ -46,9 +50,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
                   <MapPin className="w-5 h-5 text-[#187CE7]" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Primary Office</div>
+                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                    Primary Office
+                  </div>
                   <div className="text-sm font-semibold text-white">
-                    Kasoa, Greater Accra, Ghana
+                    6C28+VV Antwerp, Belgium
                   </div>
                 </div>
               </div>
@@ -58,9 +64,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
                   <Clock className="w-5 h-5 text-[#187CE7]" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Office Hours</div>
+                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+                    Office Hours
+                  </div>
                   <div className="text-sm font-semibold text-white">
-                    Monday – Friday: 8:00 AM – 6:00 PM (Emergency probate filings available)
+                    Monday – Friday: 8:00 AM – 6:00 PM (Emergency probate
+                    filings available)
                   </div>
                 </div>
               </div>
@@ -71,9 +80,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
           <div className="lg:col-span-6">
             <div className="bg-white text-[#0B2238] rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-200">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-extrabold text-[#0B2238]">Start Your Estate Evaluation</h3>
+                <h3 className="text-2xl font-extrabold text-[#0B2238]">
+                  Start Your Estate Evaluation
+                </h3>
                 <p className="text-sm text-slate-600 mt-2">
-                  Submit a confidential inquiry and our attorneys will review the circumstances and respond within 24 hours.
+                  Submit a confidential inquiry and our attorneys will review
+                  the circumstances and respond within 24 hours.
                 </p>
               </div>
 

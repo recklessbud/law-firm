@@ -17,94 +17,56 @@ export interface Lawyer {
   email: string;
   phone: string;
   displayPhone: string;
-  twitter: string;
-  twitterHandle: string;
   linkedin: string;
 }
 
 export const lawyersData: Lawyer[] = [
   {
-    id: 'david-thomas',
-    name: 'David A. Thomas',
+    id: 'richard-weaver',
+    name: 'Richard Alexander Weaver',
     role: 'Managing Partner',
     focus: 'Inheritance Disputes & Complex Probate Litigation',
     bio: 'Over 22 years advocating for beneficiaries, disinherited heirs, and executors in high-stakes will contests, undue influence claims, and multi-million dollar estate battles.',
     image: lawyer1,
-    email: 'dthomas@thomaslawllc.com',
+    email: 'weaver.ralexanderfirm@gmail.com',
     phone: '7203302805',
     displayPhone: '(720) 330-2805',
-    twitter: 'https://twitter.com/ThomasLawDenver',
-    twitterHandle: '@ThomasLawDenver',
-    linkedin: 'https://linkedin.com',
-  },
-  {
-    id: 'sarah-jenkins',
-    name: 'Sarah M. Jenkins',
-    role: 'Partner',
-    focus: 'Trust Litigation & Fiduciary Duty Claims',
-    bio: 'Championing beneficiary rights and enforcing trustee accountability against improper asset distributions, self-dealing, and mismanagement of family trusts.',
-    image: lawyer2,
-    email: 'sjenkins@thomaslawllc.com',
-    phone: '7203302806',
-    displayPhone: '(720) 330-2806',
-    twitter: 'https://twitter.com/SJenkinsLaw',
-    twitterHandle: '@SJenkinsLaw',
     linkedin: 'https://linkedin.com',
   },
   {
     id: 'marcus-vance',
     name: 'Marcus T. Vance',
-    role: 'Partner',
+    role: 'Senior Solicitor',
     focus: 'Contested Wills & Capacity Proceedings',
     bio: 'Veteran trial counsel specialized in testamentary capacity litigation, elder financial abuse recovery, and resolving contentious sibling inheritance divisions.',
     image: lawyer3,
-    email: 'mvance@thomaslawllc.com',
+    email: 'mvance@weaverfirm.com',
     phone: '7203302807',
     displayPhone: '(720) 330-2807',
-    twitter: 'https://twitter.com/MarcusVanceLaw',
-    twitterHandle: '@MarcusVanceLaw',
-    linkedin: 'https://linkedin.com',
-  },
-  {
-    id: 'elena-rostova',
-    name: 'Elena Rostova',
-    role: 'Senior Counsel',
-    focus: 'High-Net-Worth Estate Planning & Trusts',
-    bio: 'Designing customized dynasty trusts, asset protection strategies, and generational wealth transfer plans to safeguard families and avoid probate court delays.',
-    image: lawyer4,
-    email: 'erostova@thomaslawllc.com',
-    phone: '7203302808',
-    displayPhone: '(720) 330-2808',
-    twitter: 'https://twitter.com/ElenaRostovaLaw',
-    twitterHandle: '@ElenaRostovaLaw',
     linkedin: 'https://linkedin.com',
   },
   {
     id: 'jonathan-hayes',
     name: 'Jonathan D. Hayes',
-    role: 'Partner',
-    focus: 'Probate Administration & Asset Recovery',
-    bio: 'Guiding personal representatives through intricate estate settlements, creditor resolution, business succession transfers, and omitted heir proceedings.',
+    role: 'Barrister',
+    focus: 'Probate Litigation & Trust Disputes',
+    bio: 'Experienced litigator handling estate disputes, will contests, and complex probate litigation with a focus on achieving favorable outcomes for beneficiaries and executors.',
     image: lawyer5,
-    email: 'jhayes@thomaslawllc.com',
+    email: 'jhayes@weaverfirm.com',
     phone: '7203302809',
     displayPhone: '(720) 330-2809',
-    twitter: 'https://twitter.com/JHayesLitigation',
-    twitterHandle: '@JHayesLitigation',
     linkedin: 'https://linkedin.com',
   },
   {
     id: 'amanda-chen',
     name: 'Amanda K. Chen',
-    role: 'Senior Associate',
-    focus: 'Estate Administration & Conservatorships',
-    bio: 'Dedicated advocate assisting families with court-supervised probate administration, adult guardianships, and sensitive inheritance dispute mediations.',
+    role: 'Attorney',
+    focus: 'Estate Planning & Probate Administration',
+    bio: 'Dedicated advocate assisting families with comprehensive estate planning, wills, trusts, and navigating the probate process with compassion and legal expertise.',
     image: lawyer6,
-    email: 'achen@thomaslawllc.com',
+    email: 'achen@weaverfirm.com',
     phone: '7203302810',
     displayPhone: '(720) 330-2810',
-    twitter: 'https://twitter.com/AmandaChenLaw',
-    twitterHandle: '@AmandaChenLaw',
     linkedin: 'https://linkedin.com',
   },
 ];
@@ -217,23 +179,6 @@ export const AttorneysList: React.FC<AttorneysListProps> = ({ }) => {
                       )}
                     </button>
                   </div>
-
-                  {/* Twitter / X */}
-                  <a
-                    href={lawyer.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between p-2 rounded-lg bg-slate-50 hover:bg-blue-50/80 hover:text-[#187CE7] transition-colors group/link"
-                  >
-                    <span className="flex items-center gap-2 font-medium">
-                      {/* X / Twitter Custom SVG */}
-                      <svg className="w-3.5 h-3.5 text-[#0B2238] group-hover/link:text-[#187CE7] fill-current" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                      </svg>
-                      <span>{lawyer.twitterHandle}</span>
-                    </span>
-                    <ExternalLink className="w-3 h-3 text-slate-400 group-hover/link:text-[#187CE7]" />
-                  </a>
                 </div>
 
               </div>

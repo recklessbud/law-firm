@@ -24,7 +24,7 @@ export const AttorneySection: React.FC<AttorneySectionProps> = ({ onContactClick
                   className="w-full h-auto object-cover object-top aspect-[4/5] hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0B2238] via-[#0B2238]/80 to-transparent p-6 text-white">
-                  <h3 className="text-2xl font-extrabold tracking-wide">Kwadwo Agyeman-Badu</h3>
+                  <h3 className="text-2xl font-extrabold tracking-wide">Richard Alexander Weaver</h3>
                   <p className="text-[#187CE7] font-semibold text-sm tracking-wider uppercase">
                     Managing Partner & Lead Probate Litigator
                   </p>
@@ -45,7 +45,7 @@ export const AttorneySection: React.FC<AttorneySectionProps> = ({ onContactClick
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-              When family dynamics, substantial wealth, and estate distribution intersect, disputes can threaten both financial security and generational bonds. For over two decades, David A. Thomas has represented beneficiaries, executors, and families navigating contentious probate and trust matters.
+              When family dynamics, substantial wealth, and estate distribution intersect, disputes can threaten both financial security and generational bonds. For over two decades, Richard A. Weaver has represented beneficiaries, executors, and families navigating contentious probate and trust matters.
             </p>
 
             <p className="text-slate-600 text-base leading-relaxed mb-8">
@@ -58,7 +58,7 @@ export const AttorneySection: React.FC<AttorneySectionProps> = ({ onContactClick
                 <ShieldCheck className="w-5 h-5 text-[#187CE7] flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-sm text-[#0B2238]">Probate Trial Experience</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">Over 150+ estate & trust disputes successfully litigated</p>
+                  <p className="text-xs text-slate-600 mt-0.5">Over 100+ estate & trust disputes successfully litigated</p>
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ export const AttorneySection: React.FC<AttorneySectionProps> = ({ onContactClick
                 <Award className="w-5 h-5 text-[#187CE7] flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-sm text-[#0B2238]">Admissions & Honors</h4>
-                  <p className="text-xs text-slate-600 mt-0.5">Ghana Bar Association, International Bar Association</p>
+                  <p className="text-xs text-slate-600 mt-0.5">New York State Bar, Colorado State Bar, Bel</p>
                 </div>
               </div>
 

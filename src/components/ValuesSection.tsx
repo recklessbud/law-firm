@@ -34,7 +34,7 @@ export const ValuesSection: React.FC = () => {
             <span>Our Foundation</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B2238] tracking-tight">
-            The Three Pillars of Banku Law LLC
+            The Three Pillars of Richard Weaver P.C.
           </h2>
           <p className="mt-4 text-slate-600 text-base sm:text-lg">
             Dedicated legal counsel protecting family legacies, inheritance rights, and estate assets.
