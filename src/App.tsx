@@ -49,11 +49,8 @@ export const App: React.FC = () => {
         {/* Direct Contact & Inquiry Section */}
         <ContactSection onRequestModal={() => handleOpenContact()} />
       </main>
-
-      {/* Footer with Legal Disclaimers & Info */}
       <Footer />
 
-      {/* Interactive Case Consultation Modal */}
       <ContactModal
         isOpen={isModalOpen}
         onClose={handleCloseContact}

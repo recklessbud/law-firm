@@ -20,24 +20,24 @@ const practices = [
     description:
       'Guiding executors, administrators, and personal representatives smoothly through formal probate proceedings, creditor resolution, inventorying, and timely asset distributions.',
   },
-  {
-    icon: Shield,
-    title: 'High-Net-Worth Estate & Wealth Planning',
-    description:
-      'Structuring revocable living trusts, irrevocable dynasty trusts, healthcare directives, and powers of attorney to safeguard generational wealth and bypass probate court delays.',
-  },
-  {
-    icon: Users,
-    title: 'Beneficiary Rights & Asset Recovery',
-    description:
-      'Representing omitted heirs, rightful beneficiaries, and surviving spouses to enforce statutory inheritance shares and recover wrongfully transferred estate assets.',
-  },
-  {
-    icon: Scroll,
-    title: 'Family Business Succession & Ownership Transfers',
-    description:
-      'Facilitating seamless intergenerational transfers of privately held businesses, real estate holdings, and commercial assets while mitigating family disputes and tax liabilities.',
-  },
+  // {
+  //   icon: Shield,
+  //   title: 'High-Net-Worth Estate & Wealth Planning',
+  //   description:
+  //     'Structuring revocable living trusts, irrevocable dynasty trusts, healthcare directives, and powers of attorney to safeguard generational wealth and bypass probate court delays.',
+  // },
+  // {
+  //   icon: Users,
+  //   title: 'Beneficiary Rights & Asset Recovery',
+  //   description:
+  //     'Representing omitted heirs, rightful beneficiaries, and surviving spouses to enforce statutory inheritance shares and recover wrongfully transferred estate assets.',
+  // },
+  // {
+  //   icon: Scroll,
+  //   title: 'Family Business Succession & Ownership Transfers',
+  //   description:
+  //     'Facilitating seamless intergenerational transfers of privately held businesses, real estate holdings, and commercial assets while mitigating family disputes and tax liabilities.',
+  // },
 ];
 
 interface PracticeAreasProps {
