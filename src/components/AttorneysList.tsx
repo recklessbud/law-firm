@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone, ExternalLink, Check, Copy } from 'lucide-react';
+import { Mail, Phone, Check, Copy } from 'lucide-react';
 import lawyer1 from '../assets/lawyer-1.jpg';
-import lawyer2 from '../assets/lawyer-2.jpg';
 import lawyer3 from '../assets/lawyer-3.jpg';
-import lawyer4 from '../assets/lawyer-4.jpg';
 import lawyer5 from '../assets/lawyer-5.jpg';
 import lawyer6 from '../assets/lawyer-6.jpg';
 
