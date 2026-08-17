@@ -50,7 +50,7 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
 
           {/* Subtitle / Tagline */}
           <p className="text-xs sm:text-sm md:text-base font-semibold tracking-[0.14em] sm:tracking-[0.18em] uppercase text-[#1C3B5E] max-w-xl leading-relaxed mb-9">
-            TRUSTED BY SECURITIES INDUSTRY PROFESSIONALS, COMMERCIAL LITIGANTS, AND BUSINESS OWNERS.
+            TRUSTED BY FAMILIES, BENEFICIARIES, EXECUTORS, AND ESTATE OWNERS.
           </p>
 
           {/* Call to Action Buttons */}
@@ -68,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
               href="#practice-areas"
               className="inline-flex items-center justify-center gap-2 bg-white/80 hover:bg-white text-[#0B2238] border border-slate-300/80 hover:border-[#0B2238] font-bold text-sm tracking-wider uppercase px-7 py-3.5 sm:py-4 rounded-full transition-all duration-300 backdrop-blur-xs hover:shadow-sm"
             >
-              <span>Explore Practice Areas</span>
+              <span>Inheritance Practice Areas</span>
             </a>
           </div>
 
@@ -77,10 +77,10 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5 text-[#187CE7] mb-1">
                 <Scale className="w-4 h-4" />
-                <span className="font-extrabold text-lg sm:text-2xl text-[#0B2238]">20+</span>
+                <span className="font-extrabold text-lg sm:text-2xl text-[#0B2238]">10+</span>
               </div>
               <span className="text-[11px] sm:text-xs font-semibold text-slate-600 tracking-wide uppercase">
-                Years Experience
+                Years in Probate & Estates
               </span>
             </div>
 
@@ -97,10 +97,10 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5 text-[#187CE7] mb-1">
                 <Award className="w-4 h-4" />
-                <span className="font-extrabold text-lg sm:text-2xl text-[#0B2238]">Top</span>
+                <span className="font-extrabold text-lg sm:text-2xl text-[#0B2238]">$100K+</span>
               </div>
               <span className="text-[11px] sm:text-xs font-semibold text-slate-600 tracking-wide uppercase">
-                Securities Litigator
+                Family Assets Protected
               </span>
             </div>
           </div>

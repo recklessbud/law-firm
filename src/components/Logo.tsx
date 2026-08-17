@@ -33,7 +33,7 @@ export const Logo: React.FC<LogoProps> = ({ className = '' }) => {
       {/* Brand Text */}
       <div className="flex items-baseline tracking-tight">
         <span className="font-extrabold text-xl sm:text-2xl tracking-wide text-[#0B2238] uppercase">
-          Thomas Law
+          Banku Law
         </span>
         <span className="font-semibold text-xs sm:text-sm text-[#0B2238] ml-1.5 tracking-wider uppercase opacity-90">
           LLC

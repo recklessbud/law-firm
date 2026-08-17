@@ -5,24 +5,24 @@ export const ValuesSection: React.FC = () => {
   const pillars = [
     {
       title: 'Value',
-      subtitle: 'Cost-Effective, Strategic Representation',
+      subtitle: 'Preserving Family Wealth & Fair Fee Structures',
       icon: DollarSign,
       description:
-        'We believe high-caliber legal representation should be efficient and transparent. We eliminate large firm overhead, aligning our strategies directly with your financial and business objectives.',
+        'Inheritance should enrich future generations, not get consumed by unnecessary legal battles and administrative bloat. We provide transparent, predictable billing and strategic dispute resolution to safeguard your estate’s true value.',
     },
     {
       title: 'Communication',
-      subtitle: 'Unfiltered, Responsive Partner Access',
+      subtitle: 'Compassionate, Responsive & Direct Counsel',
       icon: MessageSquare,
       description:
-        'You work directly with your lead attorney from day one. We prioritize prompt, clear, and actionable communication so you are always fully informed and empowered to make decisive moves.',
+        'Family and inheritance matters carry deep emotional significance. We listen attentively, keep executors and heirs clearly informed at every stage, and provide steady, compassionate legal guidance throughout the probate process.',
     },
     {
       title: 'Results',
-      subtitle: 'Proven Track Record of Excellence',
+      subtitle: 'Honoring Intent & Resolving Tough Disputes',
       icon: CheckCircle2,
       description:
-        'Whether in the courtroom, before regulatory authorities, or in high-stakes negotiations, our focus is unwavering: achieving the strongest possible outcome for your business and reputation.',
+        'Whether defending a contested will in probate court, holding a negligent trustee accountable, or negotiating amicable family settlements, our proven advocacy ensures your loved one’s true wishes are faithfully upheld.',
     },
   ];
 
@@ -37,7 +37,7 @@ export const ValuesSection: React.FC = () => {
             The Three Pillars of Thomas Law LLC
           </h2>
           <p className="mt-4 text-slate-600 text-base sm:text-lg">
-            A modernized legal practice built around what clients truly care about.
+            Dedicated legal counsel protecting family legacies, inheritance rights, and estate assets.
           </p>
         </div>
 

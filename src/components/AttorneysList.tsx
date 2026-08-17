@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, ExternalLink, MessageSquare, Check, Copy } from 'lucide-react';
+import { Mail, Phone, ExternalLink, Check, Copy } from 'lucide-react';
 import lawyer1 from '../assets/lawyer-1.jpg';
 import lawyer2 from '../assets/lawyer-2.jpg';
 import lawyer3 from '../assets/lawyer-3.jpg';
@@ -27,8 +27,8 @@ export const lawyersData: Lawyer[] = [
     id: 'david-thomas',
     name: 'David A. Thomas',
     role: 'Managing Partner',
-    focus: 'Securities Litigation & FINRA Defense',
-    bio: 'Over 22 years representing broker-dealers, RIA firms, and financial advisors in complex regulatory proceedings and arbitrations.',
+    focus: 'Inheritance Disputes & Complex Probate Litigation',
+    bio: 'Over 22 years advocating for beneficiaries, disinherited heirs, and executors in high-stakes will contests, undue influence claims, and multi-million dollar estate battles.',
     image: lawyer1,
     email: 'dthomas@thomaslawllc.com',
     phone: '7203302805',
@@ -41,8 +41,8 @@ export const lawyersData: Lawyer[] = [
     id: 'sarah-jenkins',
     name: 'Sarah M. Jenkins',
     role: 'Partner',
-    focus: 'Commercial & Business Litigation',
-    bio: 'Specializing in shareholder disputes, complex contract disputes, and partnership dissolutions across federal and state courts.',
+    focus: 'Trust Litigation & Fiduciary Duty Claims',
+    bio: 'Championing beneficiary rights and enforcing trustee accountability against improper asset distributions, self-dealing, and mismanagement of family trusts.',
     image: lawyer2,
     email: 'sjenkins@thomaslawllc.com',
     phone: '7203302806',
@@ -55,8 +55,8 @@ export const lawyersData: Lawyer[] = [
     id: 'marcus-vance',
     name: 'Marcus T. Vance',
     role: 'Partner',
-    focus: 'SEC Enforcement & Regulatory Defense',
-    bio: 'Former regulatory enforcement counsel advising financial institutions and corporate officers in SEC and state division investigations.',
+    focus: 'Contested Wills & Capacity Proceedings',
+    bio: 'Veteran trial counsel specialized in testamentary capacity litigation, elder financial abuse recovery, and resolving contentious sibling inheritance divisions.',
     image: lawyer3,
     email: 'mvance@thomaslawllc.com',
     phone: '7203302807',
@@ -69,8 +69,8 @@ export const lawyersData: Lawyer[] = [
     id: 'elena-rostova',
     name: 'Elena Rostova',
     role: 'Senior Counsel',
-    focus: 'Corporate Governance & Risk Management',
-    bio: 'Providing strategic counsel to executive boards, private equity firms, and emerging growth enterprises on regulatory compliance.',
+    focus: 'High-Net-Worth Estate Planning & Trusts',
+    bio: 'Designing customized dynasty trusts, asset protection strategies, and generational wealth transfer plans to safeguard families and avoid probate court delays.',
     image: lawyer4,
     email: 'erostova@thomaslawllc.com',
     phone: '7203302808',
@@ -83,8 +83,8 @@ export const lawyersData: Lawyer[] = [
     id: 'jonathan-hayes',
     name: 'Jonathan D. Hayes',
     role: 'Partner',
-    focus: 'White Collar Defense & Internal Investigations',
-    bio: 'Defending corporate executives and business entities in civil enforcement, grand jury subpoenas, and internal compliance audits.',
+    focus: 'Probate Administration & Asset Recovery',
+    bio: 'Guiding personal representatives through intricate estate settlements, creditor resolution, business succession transfers, and omitted heir proceedings.',
     image: lawyer5,
     email: 'jhayes@thomaslawllc.com',
     phone: '7203302809',
@@ -97,8 +97,8 @@ export const lawyersData: Lawyer[] = [
     id: 'amanda-chen',
     name: 'Amanda K. Chen',
     role: 'Senior Associate',
-    focus: 'FINRA Arbitration & Broker-Dealer Defense',
-    bio: 'Dedicated advocate with extensive trial preparation and arbitration experience representing securities professionals.',
+    focus: 'Estate Administration & Conservatorships',
+    bio: 'Dedicated advocate assisting families with court-supervised probate administration, adult guardianships, and sensitive inheritance dispute mediations.',
     image: lawyer6,
     email: 'achen@thomaslawllc.com',
     phone: '7203302810',
@@ -113,7 +113,7 @@ interface AttorneysListProps {
   onConsultLawyer?: (lawyerName: string) => void;
 }
 
-export const AttorneysList: React.FC<AttorneysListProps> = ({ onConsultLawyer }) => {
+export const AttorneysList: React.FC<AttorneysListProps> = ({ }) => {
   const [copiedEmail, setCopiedEmail] = useState<string | null>(null);
 
   const handleCopyEmail = (email: string, e: React.MouseEvent) => {
@@ -131,18 +131,18 @@ export const AttorneysList: React.FC<AttorneysListProps> = ({ onConsultLawyer })
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#187CE7] uppercase mb-3">
             <span className="w-8 h-[2px] bg-[#187CE7]"></span>
-            <span>Legal Team</span>
+            <span>Inheritance & Estate Counsel</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B2238] tracking-tight leading-tight">
-            Our Attorneys & Counsel
+            Our Inheritance & Probate Attorneys
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            Direct, senior-level access to proven securities and commercial litigators. Reach out to any member of our team directly.
+            Direct access to dedicated probate litigators and estate planning partners. Reach out to any member of our team directly for a confidential evaluation.
           </p>
         </div>
 
         {/* 6 Lawyers Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {lawyersData.map((lawyer) => (
             <div
               key={lawyer.id}
@@ -207,7 +207,7 @@ export const AttorneysList: React.FC<AttorneysListProps> = ({ onConsultLawyer })
                     <button
                       type="button"
                       onClick={(e) => handleCopyEmail(lawyer.email, e)}
-                      className="p-1 text-slate-400 hover:text-[#0B2238] transition-colors flex-shrink-0"
+                      className="p-1 text-slate-400 hover:text-[#0B2238] transition-colors flex-shrink-0 cursor-pointer"
                       title="Copy email"
                     >
                       {copiedEmail === lawyer.email ? (
@@ -236,15 +236,6 @@ export const AttorneysList: React.FC<AttorneysListProps> = ({ onConsultLawyer })
                   </a>
                 </div>
 
-                {/* Direct Consultation Button */}
-                <button
-                  type="button"
-                  onClick={() => onConsultLawyer?.(lawyer.name)}
-                  className="w-full flex items-center justify-center gap-2 bg-[#0B2238] hover:bg-[#187CE7] text-white text-xs font-bold uppercase tracking-wider py-3 rounded-xl transition-all duration-200 shadow-xs hover:shadow-md cursor-pointer"
-                >
-                  <MessageSquare className="w-3.5 h-3.5" />
-                  <span>Consult with {lawyer.name.split(' ')[0]}</span>
-                </button>
               </div>
             </div>
           ))}

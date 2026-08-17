@@ -19,7 +19,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     email: '',
     phone: '',
     attorney: defaultAttorney || 'Any Available Partner',
-    practiceArea: defaultPractice || 'Securities Litigation',
+    practiceArea: defaultPractice || 'Inheritance Dispute / Will Contest',
     message: '',
   });
 
@@ -29,7 +29,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     if (isOpen) {
       setFormData((prev) => ({
         ...prev,
-        practiceArea: defaultPractice || prev.practiceArea || 'Securities Litigation',
+        practiceArea: defaultPractice || prev.practiceArea || 'Inheritance Dispute / Will Contest',
         attorney: defaultAttorney || prev.attorney || 'Any Available Partner',
       }));
     }
@@ -49,7 +49,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
       email: '',
       phone: '',
       attorney: 'Any Available Partner',
-      practiceArea: 'Securities Litigation',
+      practiceArea: 'Inheritance Dispute / Will Contest',
       message: '',
     });
     onClose();
@@ -81,7 +81,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               Consultation Request Received
             </h3>
             <p className="text-slate-600 max-w-md mx-auto mb-8 leading-relaxed">
-              Thank you, <span className="font-semibold text-[#0B2238]">{formData.fullName}</span>. An attorney from Thomas Law LLC will review your inquiry and contact you directly within 24 hours.
+              Thank you,{" "}
+              <span className="font-semibold text-[#0B2238]">
+                {formData.fullName}
+              </span>
+              . An inheritance attorney from Thomas Law LLC will review your
+              inquiry and contact you directly within 24 hours.
             </p>
             <div className="flex justify-center gap-4">
               <button
@@ -99,18 +104,20 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             <div className="mb-6">
               <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-[#187CE7] mb-2">
                 <Shield className="w-3.5 h-3.5" />
-                <span>Confidential Case Inquiry</span>
+                <span>Confidential Estate Inquiry</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0B2238] tracking-tight">
-                Request a Consultation
+                Request an Inheritance Consultation
               </h3>
               <p className="text-slate-600 text-sm mt-1">
-                {defaultAttorney ? (
+                {defaultAttorney &&
+                defaultAttorney !== "Any Available Partner" ? (
                   <span className="flex items-center gap-1 text-[#187CE7] font-semibold">
-                    <User className="w-3.5 h-3.5" /> Direct inquiry with {defaultAttorney}
+                    <User className="w-3.5 h-3.5" /> Direct inquiry with{" "}
+                    {defaultAttorney}
                   </span>
                 ) : (
-                  'Speak directly with an experienced securities and commercial litigation attorney.'
+                  "Speak directly with an experienced inheritance and probate litigation attorney."
                 )}
               </p>
             </div>
@@ -127,7 +134,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     required
                     placeholder="John Doe"
                     value={formData.fullName}
-                    onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, fullName: e.target.value })
+                    }
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm transition-all"
                   />
                 </div>
@@ -141,7 +150,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     required
                     placeholder="720-000-0000"
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm transition-all"
                   />
                 </div>
@@ -157,46 +168,86 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     required
                     placeholder="john@example.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm transition-all"
                   />
                 </div>
 
+                {/* <div>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+                    Practice Area
+                  </label>
+                  <select
+                    value={formData.practiceArea}
+                    onChange={(e) => setFormData({ ...formData, practiceArea: e.target.value })}
+                    className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm bg-white transition-all"
+                  >
+                    <option value="Inheritance Dispute / Will Contest">Inheritance Dispute / Will Contest</option>
+                    <option value="Trust Litigation & Fiduciary Claims">Trust Litigation & Fiduciary Claims</option>
+                    <option value="Probate Administration & Estate Settlement">Probate Administration & Estate Settlement</option>
+                    <option value="Estate Planning & Living Trusts">Estate Planning & Living Trusts</option>
+                    <option value="Beneficiary Rights & Asset Recovery">Beneficiary Rights & Asset Recovery</option>
+                    <option value="Other Inheritance Matter">Other Inheritance Matter</option>
+                  </select>
+                </div> */}
+
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
-                    Select Attorney
+                    Select Attorney (Optional)
                   </label>
                   <select
                     value={formData.attorney}
-                    onChange={(e) => setFormData({ ...formData, attorney: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, attorney: e.target.value })
+                    }
                     className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm bg-white transition-all"
                   >
-                    <option value="Any Available Partner">Any Available Partner</option>
-                    <option value="David A. Thomas">David A. Thomas (Managing Partner)</option>
-                    <option value="Sarah M. Jenkins">Sarah M. Jenkins (Commercial Litigation)</option>
-                    <option value="Marcus T. Vance">Marcus T. Vance (SEC Enforcement)</option>
-                    <option value="Elena Rostova">Elena Rostova (Corporate Counsel)</option>
-                    <option value="Jonathan D. Hayes">Jonathan D. Hayes (White Collar Defense)</option>
-                    <option value="Amanda K. Chen">Amanda K. Chen (FINRA Arbitration)</option>
+                    <option value="Any Available Partner">
+                      Any Available Partner
+                    </option>
+                    <option value="David A. Thomas">
+                      David A. Thomas (Managing Partner - Inheritance
+                      Litigation)
+                    </option>
+                    <option value="Sarah M. Jenkins">
+                      Sarah M. Jenkins (Partner - Trust Litigation)
+                    </option>
+                    <option value="Marcus T. Vance">
+                      Marcus T. Vance (Partner - Contested Wills)
+                    </option>
+                    <option value="Elena Rostova">
+                      Elena Rostova (Senior Counsel - Wealth Planning)
+                    </option>
+                    <option value="Jonathan D. Hayes">
+                      Jonathan D. Hayes (Partner - Probate Administration)
+                    </option>
+                    <option value="Amanda K. Chen">
+                      Amanda K. Chen (Senior Associate - Estate &
+                      Conservatorship)
+                    </option>
                   </select>
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
-                  Brief Overview of Your Matter
+                  Brief Overview of Your Estate / Inheritance Dispute
                 </label>
                 <textarea
                   rows={3}
                   required
-                  placeholder="Please describe the general nature of your dispute or legal needs..."
+                  placeholder="Please describe the nature of the inheritance, estate assets, or probate dispute..."
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm transition-all resize-none"
                 ></textarea>
               </div>
 
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-2">
                 <div className="flex items-center gap-2 text-xs text-slate-500">
                   <Shield className="w-4 h-4 text-emerald-600" />
                   <span>All communications are strictly confidential.</span>
@@ -214,13 +265,16 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
             {/* Quick Contact Footer Strip inside modal */}
             <div className="mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600">
-              <a href="tel:7203302805" className="flex items-center gap-1.5 hover:text-[#187CE7] font-semibold">
+              <a
+                href="tel:0241234567"
+                className="flex items-center gap-1.5 hover:text-[#187CE7] font-semibold"
+              >
                 <Phone className="w-3.5 h-3.5 text-[#187CE7]" />
-                <span>Direct: 720.330.2805</span>
+                <span>Direct: 0241234567</span>
               </a>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#187CE7]" />
-                <span>Denver, Colorado</span>
+                <span>Accra, Ghana</span>
               </span>
             </div>
           </div>

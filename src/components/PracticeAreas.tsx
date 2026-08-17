@@ -1,30 +1,42 @@
 import React from 'react';
-import { Briefcase, TrendingUp, ShieldAlert, FileText, ChevronRight } from 'lucide-react';
+import { Scroll, Shield, Scale, Users, ChevronRight, Landmark } from 'lucide-react';
 
 const practices = [
   {
-    icon: TrendingUp,
-    title: 'Securities Litigation & FINRA Arbitration',
+    icon: Scale,
+    title: 'Inheritance Disputes & Will Contests',
     description:
-      'Aggressive and strategic defense for broker-dealers, registered representatives, RIA firms, and financial professionals facing regulatory inquiries, customer disputes, and FINRA arbitration.',
+      'Challenging and defending wills against allegations of undue influence, lack of testamentary capacity, fraudulent execution, and elder financial exploitation in probate court.',
   },
   {
-    icon: Briefcase,
-    title: 'Commercial & Business Litigation',
+    icon: Landmark,
+    title: 'Trust Litigation & Fiduciary Accountability',
     description:
-      'Resolving complex business disputes, breach of contract, shareholder disagreements, partnership dissolutions, and fiduciary claims in state and federal courts.',
+      'Holding trustees and executors accountable for breaches of fiduciary duty, asset misappropriation, failure to account, and improper distribution of family trust funds.',
   },
   {
-    icon: ShieldAlert,
-    title: 'Regulatory Defense & Enforcement',
+    icon: Scroll,
+    title: 'Probate Administration & Estate Settlement',
     description:
-      'Representing firms and individuals before the SEC, FINRA, state securities divisions, and administrative bodies to protect professional licenses and business reputations.',
+      'Guiding executors, administrators, and personal representatives smoothly through formal probate proceedings, creditor resolution, inventorying, and timely asset distributions.',
   },
   {
-    icon: FileText,
-    title: 'Corporate Counsel & Risk Management',
+    icon: Shield,
+    title: 'High-Net-Worth Estate & Wealth Planning',
     description:
-      'Proactive compliance counseling, contract negotiation, and dispute mitigation designed to protect business owners and prevent costly litigation before it starts.',
+      'Structuring revocable living trusts, irrevocable dynasty trusts, healthcare directives, and powers of attorney to safeguard generational wealth and bypass probate court delays.',
+  },
+  {
+    icon: Users,
+    title: 'Beneficiary Rights & Asset Recovery',
+    description:
+      'Representing omitted heirs, rightful beneficiaries, and surviving spouses to enforce statutory inheritance shares and recover wrongfully transferred estate assets.',
+  },
+  {
+    icon: Scroll,
+    title: 'Family Business Succession & Ownership Transfers',
+    description:
+      'Facilitating seamless intergenerational transfers of privately held businesses, real estate holdings, and commercial assets while mitigating family disputes and tax liabilities.',
   },
 ];
 
@@ -40,30 +52,30 @@ export const PracticeAreas: React.FC<PracticeAreasProps> = ({ onSelectPractice }
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#187CE7] uppercase mb-3">
             <span className="w-8 h-[2px] bg-[#187CE7]"></span>
-            <span>Core Competencies</span>
+            <span>Inheritance & Estate Practice</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B2238] tracking-tight leading-tight">
-            Focused legal counsel for high-stakes business & securities matters.
+            Protecting family legacies, inheritance rights, and estate assets.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-            We deliver sophisticated legal representation tailored to securities industry leaders, commercial litigants, and growing enterprises.
+            From complex probate courtroom battles to proactive generational wealth planning, our firm provides strategic advocacy during life’s most pivotal transitions.
           </p>
         </div>
 
         {/* Practice Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {practices.map((practice, index) => {
             const Icon = practice.icon;
             return (
               <div
                 key={index}
-                className="group relative bg-white p-8 sm:p-10 rounded-2xl border border-slate-200/90 hover:border-[#187CE7]/50 transition-all duration-300 hover:shadow-[0_12px_30px_rgba(11,34,56,0.08)] flex flex-col justify-between"
+                className="group relative bg-white p-8 sm:p-9 rounded-2xl border border-slate-200/90 hover:border-[#187CE7]/50 transition-all duration-300 hover:shadow-[0_12px_30px_rgba(11,34,56,0.08)] flex flex-col justify-between"
               >
                 <div>
                   <div className="w-14 h-14 rounded-xl bg-slate-100 text-[#0B2238] flex items-center justify-center mb-6 group-hover:bg-[#187CE7] group-hover:text-white transition-all duration-300 shadow-xs">
                     <Icon className="w-7 h-7" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-[#0B2238] mb-3 group-hover:text-[#187CE7] transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#0B2238] mb-3 group-hover:text-[#187CE7] transition-colors leading-snug">
                     {practice.title}
                   </h3>
                   <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
@@ -74,9 +86,9 @@ export const PracticeAreas: React.FC<PracticeAreasProps> = ({ onSelectPractice }
                 <button
                   type="button"
                   onClick={() => onSelectPractice?.(practice.title)}
-                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0B2238] group-hover:text-[#187CE7] transition-colors self-start mt-auto"
+                  className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#0B2238] group-hover:text-[#187CE7] transition-colors self-start mt-auto cursor-pointer"
                 >
-                  <span>Learn more about this practice</span>
+                  <span>Inquire about this practice</span>
                   <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                 </button>
               </div>

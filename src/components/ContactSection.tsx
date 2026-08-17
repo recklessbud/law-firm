@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Clock, Shield } from 'lucide-react';
+import { Phone, MapPin, Clock, Shield, CheckCircle2 } from 'lucide-react';
 
 interface ContactSectionProps {
   onRequestModal?: () => void;
@@ -14,15 +14,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
           <div className="lg:col-span-6">
             <div className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#187CE7] uppercase mb-4">
               <span className="w-8 h-[2px] bg-[#187CE7]"></span>
-              <span>Direct Communication</span>
+              <span>Confidential Consultation</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-6">
-              Ready to discuss your legal matter?
+              Need counsel on an inheritance or estate matter?
             </h2>
 
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
-              Speak directly with David A. Thomas to evaluate your securities dispute, regulatory inquiry, or commercial litigation.
+              Speak directly with our probate and inheritance attorneys to evaluate your rights, protect estate assets, and formulate an effective legal strategy.
             </p>
 
             <div className="space-y-4">
@@ -34,9 +34,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Direct Phone</div>
+                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Direct Firm Line</div>
                   <div className="text-lg sm:text-xl font-bold tracking-wide text-white group-hover:text-[#187CE7] transition-colors">
-                    720.330.2805
+                    0241234567
                   </div>
                 </div>
               </a>
@@ -46,9 +46,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
                   <MapPin className="w-5 h-5 text-[#187CE7]" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Office Location</div>
+                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Primary Office</div>
                   <div className="text-sm font-semibold text-white">
-                    Denver Tech Center & Downtown Denver, CO
+                    Kasoa, Greater Accra, Ghana
                   </div>
                 </div>
               </div>
@@ -58,9 +58,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
                   <Clock className="w-5 h-5 text-[#187CE7]" />
                 </div>
                 <div>
-                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Availability</div>
+                  <div className="text-xs text-slate-400 font-semibold uppercase tracking-wider">Office Hours</div>
                   <div className="text-sm font-semibold text-white">
-                    Monday – Friday: 8:00 AM – 6:00 PM (Emergency consultations upon request)
+                    Monday – Friday: 8:00 AM – 6:00 PM (Emergency probate filings available)
                   </div>
                 </div>
               </div>
@@ -71,10 +71,25 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
           <div className="lg:col-span-6">
             <div className="bg-white text-[#0B2238] rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-200">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-extrabold text-[#0B2238]">Start Your Case Evaluation</h3>
+                <h3 className="text-2xl font-extrabold text-[#0B2238]">Start Your Estate Evaluation</h3>
                 <p className="text-sm text-slate-600 mt-2">
-                  Submit an initial inquiry and our principal attorney will review the circumstances.
+                  Submit a confidential inquiry and our attorneys will review the circumstances and respond within 24 hours.
                 </p>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center gap-2.5 text-xs text-slate-700">
+                  <CheckCircle2 className="w-4 h-4 text-[#187CE7] flex-shrink-0" />
+                  <span>Free Initial Case Review & Inheritance Assessment</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-xs text-slate-700">
+                  <CheckCircle2 className="w-4 h-4 text-[#187CE7] flex-shrink-0" />
+                  <span>Strict Attorney-Client Confidentiality Guaranteed</span>
+                </div>
+                <div className="flex items-center gap-2.5 text-xs text-slate-700">
+                  <CheckCircle2 className="w-4 h-4 text-[#187CE7] flex-shrink-0" />
+                  <span>Direct Partner Engagement on Every Matter</span>
+                </div>
               </div>
 
               <button
@@ -87,7 +102,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
 
               <div className="flex items-center justify-center gap-2 text-xs text-slate-500 text-center">
                 <Shield className="w-4 h-4 text-emerald-600" />
-                <span>Protected by Attorney-Client Privilege consideration</span>
+                <span>Protected by Attorney-Client Privilege</span>
               </div>
             </div>
           </div>

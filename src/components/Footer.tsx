@@ -17,12 +17,12 @@ export const Footer: React.FC = () => {
               <Logo />
             </div>
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
-              Strategic, partner-level counsel for securities industry professionals, commercial litigants, and growing enterprises.
+              Dedicated, partner-level advocacy protecting family legacies, resolving complex inheritance disputes, and guiding families through probate and trust administration.
             </p>
             <div className="pt-2 flex items-center gap-3 text-xs">
               <span className="text-white font-semibold">Direct Call:</span>
               <a href="tel:7203302805" className="text-[#187CE7] hover:underline font-bold">
-                720.330.2805
+                0241234567
               </a>
             </div>
           </div>
@@ -48,22 +48,22 @@ export const Footer: React.FC = () => {
 
           {/* Practice Areas */}
           <div>
-            <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-4">Focus Areas</h4>
+            <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-4">Inheritance Focus</h4>
             <ul className="space-y-2.5">
               <li>
-                <a href="#practice-areas" className="hover:text-white transition-colors">Securities Litigation</a>
+                <a href="#practice-areas" className="hover:text-white transition-colors">Will Contests</a>
               </li>
               <li>
-                <a href="#practice-areas" className="hover:text-white transition-colors">FINRA Arbitration</a>
+                <a href="#practice-areas" className="hover:text-white transition-colors">Trust Litigation</a>
               </li>
               <li>
-                <a href="#practice-areas" className="hover:text-white transition-colors">Commercial Disputes</a>
+                <a href="#practice-areas" className="hover:text-white transition-colors">Probate Administration</a>
               </li>
               <li>
-                <a href="#practice-areas" className="hover:text-white transition-colors">Regulatory Enforcement</a>
+                <a href="#practice-areas" className="hover:text-white transition-colors">Beneficiary Rights</a>
               </li>
               <li>
-                <a href="#practice-areas" className="hover:text-white transition-colors">Corporate Counsel</a>
+                <a href="#practice-areas" className="hover:text-white transition-colors">Estate & Wealth Planning</a>
               </li>
             </ul>
           </div>
@@ -72,9 +72,9 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-4">Office</h4>
             <address className="not-italic space-y-2 text-xs text-slate-400">
-              <p>Thomas Law LLC</p>
-              <p>Denver, Colorado</p>
-              <p className="pt-2">Phone: (720) 330-2805</p>
+              <p>Banku Law LLC</p>
+              <p>Kasoa, Greater Accra, Ghana</p>
+              <p className="pt-2">Phone: 0241234567</p>
             </address>
           </div>
         </div>
