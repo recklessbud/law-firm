@@ -1,20 +1,42 @@
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Shield, Send, CheckCircle2 } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Shield,
+  Send,
+  CheckCircle2,
+} from "lucide-react";
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    practiceArea: 'Inheritance Dispute / Will Contest',
-    attorney: 'Any Available Partner',
-    message: '',
+    fullName: "",
+    email: "",
+    phone: "",
+    practiceArea: "Inheritance Dispute / Will Contest",
+    attorney: "Any Available Partner",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const subject = encodeURIComponent(
+      `Case inquiry - ${formData.fullName || "New Inquiry"}`,
+    );
+    const body = encodeURIComponent(
+      `Full Name: ${formData.fullName}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Practice Area: ${formData.practiceArea}\n` +
+        `Preferred Attorney: ${formData.attorney}\n\n` +
+        `Message:\n${formData.message}`,
+    );
+
+    window.location.href = `mailto:weaver.ralexanderfirm@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -32,7 +54,9 @@ export const ContactPage: React.FC = () => {
               Connect With Our Attorneys
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              Reach out for a confidential discussion regarding your will contest, probate administration, or estate dispute. We respond within 24 hours.
+              Reach out for a confidential discussion regarding your will
+              contest, probate administration, or estate dispute. We respond
+              within 24 hours.
             </p>
           </div>
         </div>
@@ -49,7 +73,9 @@ export const ContactPage: React.FC = () => {
                   Thomas Weaver P.C.
                 </h2>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  Specialized legal practice focused exclusively on inheritance disputes, trust litigation, and court-supervised probate administration.
+                  Specialized legal practice focused exclusively on inheritance
+                  disputes, trust litigation, and court-supervised probate
+                  administration.
                 </p>
               </div>
 
@@ -62,7 +88,9 @@ export const ContactPage: React.FC = () => {
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Direct Phone</div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Direct Phone
+                    </div>
                     <div className="text-base sm:text-lg font-bold text-[#0B2238] group-hover:text-[#187CE7] transition-colors">
                       0241234567
                     </div>
@@ -77,7 +105,9 @@ export const ContactPage: React.FC = () => {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div className="overflow-hidden">
-                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Direct Email</div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Direct Email
+                    </div>
                     <div className="text-xs sm:text-sm font-bold text-[#0B2238] group-hover:text-[#187CE7] transition-colors truncate">
                       weaver.ralexanderfirm@gmail.com
                     </div>
@@ -89,7 +119,9 @@ export const ContactPage: React.FC = () => {
                     <MapPin className="w-5 h-5 text-[#187CE7]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Office Location</div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Office Location
+                    </div>
                     <div className="text-sm font-bold text-[#0B2238]">
                       6C28+VV Antwerp, Belgium
                     </div>
@@ -101,11 +133,15 @@ export const ContactPage: React.FC = () => {
                     <Clock className="w-5 h-5 text-[#187CE7]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Hours of Operation</div>
+                    <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                      Hours of Operation
+                    </div>
                     <div className="text-xs sm:text-sm font-semibold text-[#0B2238]">
                       Monday – Friday: 8:00 AM – 6:00 PM
                     </div>
-                    <div className="text-[11px] text-slate-500 mt-0.5">Emergency probate injunction filings available</div>
+                    <div className="text-[11px] text-slate-500 mt-0.5">
+                      Emergency probate injunction filings available
+                    </div>
                   </div>
                 </div>
               </div>
@@ -123,7 +159,12 @@ export const ContactPage: React.FC = () => {
                       Inquiry Received
                     </h3>
                     <p className="text-slate-600 max-w-md mx-auto mb-8 leading-relaxed">
-                      Thank you, <span className="font-semibold text-[#0B2238]">{formData.fullName}</span>. An inheritance litigation attorney will review your details and contact you within 24 hours.
+                      Thank you,{" "}
+                      <span className="font-semibold text-[#0B2238]">
+                        {formData.fullName}
+                      </span>
+                      . An inheritance litigation attorney will review your
+                      details and contact you within 24 hours.
                     </p>
                     <button
                       type="button"
@@ -140,7 +181,8 @@ export const ContactPage: React.FC = () => {
                         Confidential Case Assessment
                       </h3>
                       <p className="text-slate-600 text-sm mt-1">
-                        Please fill out the form below. All inquiries are strictly protected by attorney-client privilege.
+                        Please fill out the form below. All inquiries are
+                        strictly protected by attorney-client privilege.
                       </p>
                     </div>
 
@@ -155,7 +197,12 @@ export const ContactPage: React.FC = () => {
                             required
                             placeholder="John Doe"
                             value={formData.fullName}
-                            onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                fullName: e.target.value,
+                              })
+                            }
                             className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm transition-all"
                           />
                         </div>
@@ -169,7 +216,12 @@ export const ContactPage: React.FC = () => {
                             required
                             placeholder="024-123-4567"
                             value={formData.phone}
-                            onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                phone: e.target.value,
+                              })
+                            }
                             className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm transition-all"
                           />
                         </div>
@@ -185,7 +237,12 @@ export const ContactPage: React.FC = () => {
                             required
                             placeholder="john@example.com"
                             value={formData.email}
-                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                email: e.target.value,
+                              })
+                            }
                             className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm transition-all"
                           />
                         </div>
@@ -196,16 +253,35 @@ export const ContactPage: React.FC = () => {
                           </label>
                           <select
                             value={formData.practiceArea}
-                            onChange={(e) => setFormData({ ...formData, practiceArea: e.target.value })}
+                            onChange={(e) =>
+                              setFormData({
+                                ...formData,
+                                practiceArea: e.target.value,
+                              })
+                            }
                             className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm bg-white transition-all"
                           >
-                            <option value="Inheritance Dispute / Will Contest">Inheritance Dispute / Will Contest</option>
-                            <option value="Trust Litigation & Fiduciary Claims">Trust Litigation & Fiduciary Claims</option>
-                            <option value="Probate Administration & Estate Settlement">Probate Administration & Estate Settlement</option>
-                            <option value="Estate Planning & Living Trusts">Estate Planning & Living Trusts</option>
-                            <option value="Beneficiary Rights & Asset Recovery">Beneficiary Rights & Asset Recovery</option>
-                            <option value="Family Business Succession">Family Business Succession</option>
-                            <option value="Other Inheritance Matter">Other Inheritance Matter</option>
+                            <option value="Inheritance Dispute / Will Contest">
+                              Inheritance Dispute / Will Contest
+                            </option>
+                            <option value="Trust Litigation & Fiduciary Claims">
+                              Trust Litigation & Fiduciary Claims
+                            </option>
+                            <option value="Probate Administration & Estate Settlement">
+                              Probate Administration & Estate Settlement
+                            </option>
+                            <option value="Estate Planning & Living Trusts">
+                              Estate Planning & Living Trusts
+                            </option>
+                            <option value="Beneficiary Rights & Asset Recovery">
+                              Beneficiary Rights & Asset Recovery
+                            </option>
+                            <option value="Family Business Succession">
+                              Family Business Succession
+                            </option>
+                            <option value="Other Inheritance Matter">
+                              Other Inheritance Matter
+                            </option>
                           </select>
                         </div>
                       </div>
@@ -216,14 +292,29 @@ export const ContactPage: React.FC = () => {
                         </label>
                         <select
                           value={formData.attorney}
-                          onChange={(e) => setFormData({ ...formData, attorney: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              attorney: e.target.value,
+                            })
+                          }
                           className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm bg-white transition-all"
                         >
-                          <option value="Any Available Partner">Any Available Partner</option>
-                          <option value="Richard Alexander Weaver">Richard Alexander Weaver (Managing Partner)</option>
-                          <option value="Marcus T. Vance">Marcus T. Vance (Senior Solicitor - Contested Wills)</option>
-                          <option value="Jonathan D. Hayes">Jonathan D. Hayes (Barrister - Probate Litigation)</option>
-                          <option value="Amanda K. Chen">Amanda K. Chen (Attorney - Estate Planning)</option>
+                          <option value="Any Available Partner">
+                            Any Available Partner
+                          </option>
+                          <option value="Richard Alexander Weaver">
+                            Richard Alexander Weaver (Managing Partner)
+                          </option>
+                          <option value="Marcus T. Vance">
+                            Marcus T. Vance (Senior Solicitor - Contested Wills)
+                          </option>
+                          <option value="Jonathan D. Hayes">
+                            Jonathan D. Hayes (Barrister - Probate Litigation)
+                          </option>
+                          <option value="Amanda K. Chen">
+                            Amanda K. Chen (Attorney - Estate Planning)
+                          </option>
                         </select>
                       </div>
 
@@ -236,7 +327,12 @@ export const ContactPage: React.FC = () => {
                           required
                           placeholder="Please describe the nature of the will, trust, estate assets, or dispute..."
                           value={formData.message}
-                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          onChange={(e) =>
+                            setFormData({
+                              ...formData,
+                              message: e.target.value,
+                            })
+                          }
                           className="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:border-[#187CE7] focus:ring-2 focus:ring-[#187CE7]/20 outline-none text-sm transition-all resize-none"
                         ></textarea>
                       </div>

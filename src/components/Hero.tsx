@@ -37,7 +37,7 @@ const slides: SlideData[] = [
     stats: [
       { icon: Scale, value: '30+', label: 'Years in Probate & Estates' },
       { icon: ShieldCheck, value: '100%', label: 'Direct Attorney Access' },
-      { icon: Award, value: '10M+', label: 'Family Assets Protected' },
+      { icon: Award, value: '100k+', label: 'Family Assets Protected' },
     ],
   },
   {

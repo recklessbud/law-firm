@@ -1,5 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { X, Phone, MapPin, Send, CheckCircle2, Shield, User } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import {
+  X,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle2,
+  Shield,
+  User,
+} from "lucide-react";
 
 interface ContactModalProps {
   isOpen: boolean;
@@ -11,16 +19,16 @@ interface ContactModalProps {
 export const ContactModal: React.FC<ContactModalProps> = ({
   isOpen,
   onClose,
-  defaultPractice = '',
-  defaultAttorney = '',
+  defaultPractice = "",
+  defaultAttorney = "",
 }) => {
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    attorney: defaultAttorney || 'Any Available Partner',
-    practiceArea: defaultPractice || 'Inheritance Dispute / Will Contest',
-    message: '',
+    fullName: "",
+    email: "",
+    phone: "",
+    attorney: defaultAttorney || "Any Available Partner",
+    practiceArea: defaultPractice || "Inheritance Dispute / Will Contest",
+    message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -29,8 +37,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
     if (isOpen) {
       setFormData((prev) => ({
         ...prev,
-        practiceArea: defaultPractice || prev.practiceArea || 'Inheritance Dispute / Will Contest',
-        attorney: defaultAttorney || prev.attorney || 'Any Available Partner',
+        practiceArea:
+          defaultPractice ||
+          prev.practiceArea ||
+          "Inheritance Dispute / Will Contest",
+        attorney: defaultAttorney || prev.attorney || "Any Available Partner",
       }));
     }
   }, [isOpen, defaultPractice, defaultAttorney]);
@@ -39,18 +50,32 @@ export const ContactModal: React.FC<ContactModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const subject = encodeURIComponent(
+      `Consultation request - ${formData.fullName || "New Inquiry"}`,
+    );
+    const body = encodeURIComponent(
+      `Full Name: ${formData.fullName}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Attorney: ${formData.attorney}\n` +
+        `Practice Area: ${formData.practiceArea}\n\n` +
+        `Message:\n${formData.message}`,
+    );
+
+    window.location.href = `mailto:weaver.ralexanderfirm@gmail.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
   const handleReset = () => {
     setSubmitted(false);
     setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      attorney: 'Any Available Partner',
-      practiceArea: 'Inheritance Dispute / Will Contest',
-      message: '',
+      fullName: "",
+      email: "",
+      phone: "",
+      attorney: "Any Available Partner",
+      practiceArea: "Inheritance Dispute / Will Contest",
+      message: "",
     });
     onClose();
   };
