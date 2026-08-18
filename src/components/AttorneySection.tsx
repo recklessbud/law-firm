@@ -24,9 +24,9 @@ export const AttorneySection: React.FC<AttorneySectionProps> = ({ onContactClick
                   className="w-full h-auto object-cover object-top aspect-[4/5] hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#0B2238] via-[#0B2238]/80 to-transparent p-6 text-white">
-                  <h3 className="text-2xl font-extrabold tracking-wide">Richard Alexander Weaver</h3>
+                  <h3 className="text-2xl font-extrabold tracking-wide">Thomas J. Weaver</h3>
                   <p className="text-[#187CE7] font-semibold text-sm tracking-wider uppercase">
-                    Managing Partner & Lead Probate Litigator
+                    Founder
                   </p>
                 </div>
               </div>
@@ -45,7 +45,7 @@ export const AttorneySection: React.FC<AttorneySectionProps> = ({ onContactClick
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-              When family dynamics, substantial wealth, and estate distribution intersect, disputes can threaten both financial security and generational bonds. For over two decades, Richard A. Weaver has represented beneficiaries, executors, and families navigating contentious probate and trust matters.
+              When family dynamics, substantial wealth, and estate distribution intersect, disputes can threaten both financial security and generational bonds. For over two decades, Thomas. Weaver P.C. has represented beneficiaries, executors, and families navigating contentious probate and trust matters.
             </p>
 
             <p className="text-slate-600 text-base leading-relaxed mb-8">
@@ -100,6 +100,7 @@ export const AttorneySection: React.FC<AttorneySectionProps> = ({ onContactClick
 
               <a
                 href="tel:+233241234567"
+                style={{ display: 'none' }}
                 className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-[#0B2238] font-bold text-sm px-6 py-3.5 rounded-full transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#187CE7]" />

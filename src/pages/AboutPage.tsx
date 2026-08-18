@@ -15,13 +15,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenContact }) => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#187CE7] uppercase mb-4">
               <span className="w-8 h-[2px] bg-[#187CE7]"></span>
-              <span>About Richard Weaver P.C.</span>
+              <span>About Thomas Weaver P.C.</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
               Protecting Family Wealth & Honoring Legacies
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-              Founded on the pillars of Value, Communication, and Results, Richard Weaver P.C. brings over two decades of courtroom and estate administration experience to families and beneficiaries.
+              Founded on the pillars of Value, Communication, and Results, Thomas Weaver P.C. brings over two decades of courtroom and estate administration experience to families and beneficiaries.
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenContact }) => {
                 A modern boutique firm built for high-stakes probate & inheritance disputes.
               </h2>
               <p className="text-slate-600 text-base leading-relaxed">
-                Large institutional law firms often delegate sensitive inheritance matters to junior associates while billing exorbitant hourly fees. Richard Weaver P.C. was established with a singular vision: to deliver direct, partner-level advocacy with transparent pricing and compassionate family support.
+                Large institutional law firms often delegate sensitive inheritance matters to junior associates while billing exorbitant hourly fees. Thomas Weaver P.C. was established with a singular vision: to deliver direct, partner-level advocacy with transparent pricing and compassionate family support.
               </p>
               <p className="text-slate-600 text-base leading-relaxed">
                 Based out of Antwerp, Belgium and serving clients with international and domestic estate interests, we have recovered tens of millions of dollars for disinherited heirs, protected vulnerable elders from financial exploitation, and successfully defended valid wills in probate courts.
@@ -62,7 +62,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenContact }) => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
                   src={heroBuildingImg}
-                  alt="Richard Weaver P.C. Corporate Office"
+                  alt="Thomas Weaver P.C. Corporate Office"
                   className="w-full h-full object-cover grayscale contrast-125 aspect-[4/3]"
                 />
               </div>

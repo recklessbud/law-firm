@@ -46,7 +46,7 @@ export const ContactPage: React.FC = () => {
             <div className="lg:col-span-5 space-y-8">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B2238] mb-4">
-                  Richard Weaver P.C.
+                  Thomas Weaver P.C.
                 </h2>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   Specialized legal practice focused exclusively on inheritance disputes, trust litigation, and court-supervised probate administration.

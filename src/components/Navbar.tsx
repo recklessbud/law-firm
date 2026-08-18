@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
             <a
               href="tel:+233241234567"
               className="inline-flex items-center gap-1.5 bg-[#187CE7] hover:bg-[#0f6bd3] text-white text-xs font-bold px-3.5 py-2 rounded-full transition-colors"
-              aria-label="Call Richard Weaver P.C."
+              aria-label="Call Thomas Weaver P.C."
             >
               <Phone className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">0241234567</span>

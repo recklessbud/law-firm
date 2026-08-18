@@ -274,7 +274,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({
               </a>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#187CE7]" />
-                <span>Accra, Ghana</span>
+                <span>Antwerp, Belgium</span>
               </span>
             </div>
           </div>

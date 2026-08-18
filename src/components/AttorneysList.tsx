@@ -22,7 +22,7 @@ export const lawyersData: Lawyer[] = [
   {
     id: 'richard-weaver',
     name: 'Richard Alexander Weaver',
-    role: 'Managing Partner',
+    role: 'Senior Attorney',
     focus: 'Inheritance Disputes & Complex Probate Litigation',
     bio: 'Over 22 years advocating for beneficiaries, disinherited heirs, and executors in high-stakes will contests, undue influence claims, and multi-million dollar estate battles.',
     image: lawyer1,
@@ -144,14 +144,14 @@ export const AttorneysList: React.FC<AttorneysListProps> = ({ }) => {
                 <div className="space-y-2.5 pt-4 border-t border-slate-100 text-xs text-slate-700 mb-6">
                   {/* Phone */}
                   <a
-                    href={`tel:${lawyer.phone}`}
-                    className="flex items-center justify-between p-2 rounded-lg bg-slate-50 hover:bg-blue-50/80 hover:text-[#187CE7] transition-colors group/link"
+                    href=""
+                    className="flex items-center justify-between p-2 rounded-lg bg-slate-50 hover:bg-blue-50/80 hover:text-[#187CE7] transition-colors group/link cursor-none"
                   >
                     <span className="flex items-center gap-2 font-medium">
                       <Phone className="w-3.5 h-3.5 text-[#187CE7]" />
                       <span>{lawyer.displayPhone}</span>
                     </span>
-                    <span className="text-[10px] font-bold text-slate-400 group-hover/link:text-[#187CE7] uppercase">Call</span>
+                    {/* <span className="text-[10px] font-bold text-slate-400 group-hover/link:text-[#187CE7] uppercase">Call</span> */}
                   </a>
 
                   {/* Email */}

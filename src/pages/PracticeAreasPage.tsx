@@ -292,7 +292,7 @@ export const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ onContactC
                   </div>
                 </div>
 
-                {/* How Richard Weaver P.C. Helps */}
+                {/* How Thomas Weaver P.C. Helps */}
                 <div className="mb-10">
                   <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600" />

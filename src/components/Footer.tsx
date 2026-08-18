@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
               Office
             </h4>
             <address className="not-italic space-y-2 text-xs text-slate-400">
-              <p className="text-white font-semibold">Richard Weaver P.C.</p>
+              <p className="text-white font-semibold">Thomas Weaver P.C.</p>
               <p className="flex items-start gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#187CE7] flex-shrink-0 mt-0.5" />
                 <span>6C28+VV Antwerp, Belgium</span>
@@ -125,7 +125,7 @@ export const Footer: React.FC = () => {
         {/* Legal Disclaimer & Copyright */}
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            © {new Date().getFullYear()} Richard Weaver P.C. All rights reserved. Attorney Advertising.
+            © {new Date().getFullYear()} Thomas Weaver P.C. All rights reserved. Attorney Advertising.
           </p>
 
           <p className="text-[11px] max-w-xl text-center md:text-right text-slate-500">
