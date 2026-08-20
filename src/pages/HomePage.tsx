@@ -1,12 +1,14 @@
-import React from 'react';
-import { Hero } from '../components/Hero';
-import { ValuesSection } from '../components/ValuesSection';
-import { PracticeAreas } from '../components/PracticeAreas';
-import { AttorneySection } from '../components/AttorneySection';
-import { AttorneysList } from '../components/AttorneysList';
-import { ContactSection } from '../components/ContactSection';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { Hero } from "../components/Hero";
+import { ValuesSection } from "../components/ValuesSection";
+import { PracticeAreas } from "../components/PracticeAreas";
+import { AttorneySection } from "../components/AttorneySection";
+import { AttorneysList } from "../components/AttorneysList";
+import { ContactSection } from "../components/ContactSection";
+import { Link } from "react-router-dom";
+import contactSectionPage from "../assets/contact-section-image.jpg";
+
+import { ArrowRight } from "lucide-react";
 
 interface HomePageProps {
   onOpenContact: (practice?: string, attorney?: string) => void;
@@ -15,6 +17,11 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = ({ onOpenContact }) => {
   return (
     <>
+      <img
+        src={contactSectionPage}
+        alt="Weaver Legal Consult & Associates office"
+        className="block h-[55vh] min-h-90 w-full object-cover object-center sm:h-[65vh] lg:h-[calc(100vh-5rem)]"
+      />
       {/* Hero Section */}
       <Hero onContactClick={() => onOpenContact()} />
 
@@ -34,14 +41,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenContact }) => {
             </Link>
           </div>
         </div>
-        <PracticeAreas onSelectPractice={(practice) => onOpenContact(practice)} />
+        <PracticeAreas
+          onSelectPractice={(practice) => onOpenContact(practice)}
+        />
       </section>
 
       {/* Lead Managing Partner Spotlight */}
-      <AttorneySection onContactClick={() => onOpenContact(undefined, 'Richard Alexander Weaver')} />
+      <AttorneySection
+        onContactClick={() =>
+          onOpenContact(undefined, "Richard Alexander Weaver")
+        }
+      />
 
       {/* Attorneys Team List */}
-      <AttorneysList onConsultLawyer={(lawyerName) => onOpenContact(undefined, lawyerName)} />
+      <AttorneysList
+        onConsultLawyer={(lawyerName) => onOpenContact(undefined, lawyerName)}
+      />
 
       {/* Direct Contact & Case Evaluation Section */}
       <ContactSection onRequestModal={() => onOpenContact()} />

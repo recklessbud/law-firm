@@ -34,6 +34,7 @@ export const App: React.FC = () => {
         <Navbar onContactClick={() => handleOpenContact()} />
 
         {/* Dynamic Route Pages */}
+        
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage onOpenContact={handleOpenContact} />} />
