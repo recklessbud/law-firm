@@ -21,7 +21,7 @@ export const AttorneysPage: React.FC<AttorneysPageProps> = ({ onOpenContact }) =
               Experienced Inheritance & Probate Litigators
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
-              At Thomas Weaver P.C., our lawyers provide direct, partner-level advocacy with zero hand-offs. Connect directly with any member of our inheritance and estate legal team.
+              At Weaver Legal Consult, our lawyers provide direct, partner-level advocacy with zero hand-offs. Connect directly with any member of our inheritance and estate legal team.
             </p>
           </div>
         </div>

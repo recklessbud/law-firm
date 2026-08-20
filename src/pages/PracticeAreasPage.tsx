@@ -55,7 +55,7 @@ export const detailedPractices: PracticeDetail[] = [
       'Advise trustees on compliance to safeguard them against frivolous beneficiary lawsuits.',
     ],
     caseScenario:
-      'Our team compelled a trustee who had withheld distributions for 4 years to provide full forensic accounting, resulting in court-ordered removal and immediate $1.8M asset distribution to rightful family beneficiaries.',
+      'Our team compelled a trustee who had withheld distributions for 4 years to provide full forensic accounting, resulting in court-ordered removal and immediate 200K asset distribution to rightful family beneficiaries.',
   },
   {
     id: 'probate-administration',
@@ -162,7 +162,7 @@ export const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ onContactC
       {/* Page Header Banner */}
       <section className="bg-[#0B2238] text-white py-16 sm:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B2238] via-[#0B2238]/95 to-[#187CE7]/20 pointer-events-none" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] text-[#187CE7] uppercase mb-4">
@@ -173,7 +173,10 @@ export const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ onContactC
               Inheritance, Probate & Trust Law
             </h1>
             <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8">
-              Explore our core legal disciplines. We provide strategic, partner-level representation in high-stakes will contests, fiduciary disputes, probate administration, and family wealth preservation.
+              Explore our core legal disciplines. We provide strategic,
+              partner-level representation in high-stakes will contests,
+              fiduciary disputes, probate administration, and family wealth
+              preservation.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <button
@@ -184,10 +187,10 @@ export const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ onContactC
                 Request Case Evaluation
               </button>
               <a
-                href="tel:+233241234567"
+                href="tel:+4917616131203"
                 className="bg-white/10 hover:bg-white/20 text-white font-bold text-sm px-6 py-3.5 rounded-full transition-colors"
               >
-                Call: 0241234567
+                Call: 4917616131203
               </a>
             </div>
           </div>
@@ -214,25 +217,32 @@ export const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ onContactC
                       onClick={() => setSelectedPracticeId(practice.id)}
                       className={`w-full flex items-center justify-between p-3.5 rounded-xl text-left transition-all duration-200 cursor-pointer ${
                         isSelected
-                          ? 'bg-[#0B2238] text-white shadow-md'
-                          : 'hover:bg-slate-100 text-[#0B2238]'
+                          ? "bg-[#0B2238] text-white shadow-md"
+                          : "hover:bg-slate-100 text-[#0B2238]"
                       }`}
                     >
                       <div className="flex items-center gap-3 pr-2">
-                        <Icon className={`w-5 h-5 flex-shrink-0 ${isSelected ? 'text-[#187CE7]' : 'text-slate-500'}`} />
+                        <Icon
+                          className={`w-5 h-5 flex-shrink-0 ${isSelected ? "text-[#187CE7]" : "text-slate-500"}`}
+                        />
                         <span className="text-xs sm:text-sm font-bold leading-snug">
                           {practice.title}
                         </span>
                       </div>
-                      <ChevronRight className={`w-4 h-4 flex-shrink-0 ${isSelected ? 'text-[#187CE7]' : 'text-slate-400'}`} />
+                      <ChevronRight
+                        className={`w-4 h-4 flex-shrink-0 ${isSelected ? "text-[#187CE7]" : "text-slate-400"}`}
+                      />
                     </button>
                   );
                 })}
 
                 <div className="pt-4 mt-4 border-t border-slate-100 p-3 bg-blue-50/60 rounded-xl">
-                  <div className="text-xs font-bold text-[#0B2238] mb-1">Unsure which practice applies?</div>
+                  <div className="text-xs font-bold text-[#0B2238] mb-1">
+                    Unsure which practice applies?
+                  </div>
                   <p className="text-[11px] text-slate-600 mb-3">
-                    Speak directly with Richard Alexander Weaver for an initial evaluation.
+                    Speak directly with Richard Alexander Weaver for an initial
+                    evaluation.
                   </p>
                   <button
                     type="button"
@@ -324,8 +334,13 @@ export const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ onContactC
                 {/* Bottom CTA for active practice */}
                 <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                   <div>
-                    <div className="font-bold text-sm text-[#0B2238]">Need representation in {activePractice.title}?</div>
-                    <div className="text-xs text-slate-500">All inquiries are strictly confidential and protected by privilege.</div>
+                    <div className="font-bold text-sm text-[#0B2238]">
+                      Need representation in {activePractice.title}?
+                    </div>
+                    <div className="text-xs text-slate-500">
+                      All inquiries are strictly confidential and protected by
+                      privilege.
+                    </div>
                   </div>
 
                   <button
@@ -347,8 +362,12 @@ export const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ onContactC
       <section className="py-16 sm:py-24 bg-white border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <h2 className="text-3xl font-extrabold text-[#0B2238]">All Inheritance Practice Areas</h2>
-            <p className="text-slate-600 text-sm mt-2">Comprehensive advocacy across every probate and trust scenario.</p>
+            <h2 className="text-3xl font-extrabold text-[#0B2238]">
+              All Inheritance Practice Areas
+            </h2>
+            <p className="text-slate-600 text-sm mt-2">
+              Comprehensive advocacy across every probate and trust scenario.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -359,7 +378,7 @@ export const PracticeAreasPage: React.FC<PracticeAreasPageProps> = ({ onContactC
                   key={p.id}
                   onClick={() => {
                     setSelectedPracticeId(p.id);
-                    window.scrollTo({ top: 400, behavior: 'smooth' });
+                    window.scrollTo({ top: 400, behavior: "smooth" });
                   }}
                   className="p-6 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200 hover:border-[#187CE7]/50 hover:shadow-lg transition-all duration-200 cursor-pointer flex flex-col justify-between group"
                 >

@@ -82,7 +82,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     Office Hours
                   </div>
                   <div className="text-sm font-semibold text-white">
-                    Monday – Friday: 8:00 AM – 6:00 PM (Emergency probate
+                    Monday – Friday: 8:00 AM – 3:00 PM (Emergency probate
                     filings available)
                   </div>
                 </div>

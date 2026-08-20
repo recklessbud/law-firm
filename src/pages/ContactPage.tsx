@@ -137,7 +137,7 @@ export const ContactPage: React.FC = () => {
                       Hours of Operation
                     </div>
                     <div className="text-xs sm:text-sm font-semibold text-[#0B2238]">
-                      Monday – Friday: 8:00 AM – 6:00 PM
+                      Monday – Friday: 8:00 AM – 3:00 PM
                     </div>
                     <div className="text-[11px] text-slate-500 mt-0.5">
                       Emergency probate injunction filings available
