@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { ArrowRight, Scale, ShieldCheck, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from "react";
+import { ArrowRight, Scale, ShieldCheck, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
-import heroSlide1 from '../assets/hero-building.jpg';
-import heroSlide2 from '../assets/hero-slide-2.jpg';
-import heroSlide3 from '../assets/hero-slide-3.jpg';
+import heroSlide1 from "../assets/hero-building.jpg";
+import heroSlide2 from "../assets/hero-slide-2.jpg";
+import heroSlide3 from "../assets/hero-slide-3.jpg";
 
 interface HeroProps {
   onContactClick?: () => void;
@@ -29,43 +29,50 @@ const slides: SlideData[] = [
   {
     id: 1,
     image: heroSlide1,
-    headline: ['Value.', 'Communication.', 'Results.'],
-    subtitle: 'TRUSTED BY FAMILIES, BENEFICIARIES, EXECUTORS, AND ESTATE OWNERS.',
-    ctaText: 'CONTACT US',
-    secondaryText: 'Inheritance Practice Areas',
-    secondaryLink: '/practice-areas',
+    headline: ["Value.", "Communication.", "Results."],
+    subtitle:
+      "TRUSTED BY FAMILIES, BENEFICIARIES, EXECUTORS, AND ESTATE OWNERS.",
+    ctaText: "CONTACT US",
+    secondaryText: "Inheritance Practice Areas",
+    secondaryLink: "/practice-areas",
     stats: [
-      { icon: Scale, value: '30+', label: 'Years in Probate & Estates' },
-      { icon: ShieldCheck, value: '100%', label: 'Direct Attorney Access' },
-      { icon: Award, value: '100k+', label: 'Family Assets Protected' },
+      { icon: Scale, value: "30+", label: "Years in Probate & Estates" },
+      { icon: ShieldCheck, value: "100%", label: "Direct Attorney Access" },
+      { icon: Award, value: "100k+", label: "Family Assets Protected" },
     ],
   },
   {
     id: 2,
     image: heroSlide2,
-    headline: ['Protecting.', 'Preserving.', 'Prevailing.'],
-    subtitle: 'STRATEGIC ADVOCACY IN HIGH-STAKES WILL CONTESTS & INHERITANCE DISPUTES.',
-    ctaText: 'REQUEST CASE REVIEW',
-    secondaryText: 'Meet Our Attorneys',
-    secondaryLink: '/attorneys',
+    headline: ["Protecting.", "Preserving.", "Prevailing."],
+    subtitle:
+      "STRATEGIC ADVOCACY IN HIGH-STAKES WILL CONTESTS & INHERITANCE DISPUTES.",
+    ctaText: "REQUEST CASE REVIEW",
+    secondaryText: "Meet Our Attorneys",
+    secondaryLink: "/attorneys",
     stats: [
-      { icon: Scale, value: '100+', label: 'Will Contests Resolved' },
-      { icon: ShieldCheck, value: 'Antwerp', label: '& International Practice' },
-      { icon: Award, value: 'Direct', label: 'Partner Representation' },
+      { icon: Scale, value: "100+", label: "Will Contests Resolved" },
+      {
+        icon: ShieldCheck,
+        value: "Antwerp",
+        label: "& International Practice",
+      },
+      { icon: Award, value: "Direct", label: "Partner Representation" },
     ],
   },
   {
     id: 3,
     image: heroSlide3,
-    headline: ['Clarity.', 'Accountability.', 'Legacy.'],
-    subtitle: 'SAFEGUARDING GENERATIONAL WEALTH THROUGH TRUST LITIGATION & ESTATE SETTLEMENT.',
-    ctaText: 'EVALUATE YOUR ESTATE',
-    secondaryText: 'About the Firm',
-    secondaryLink: '/about',
+    headline: ["Clarity.", "Accountability.", "Legacy."],
+    subtitle:
+      "SAFEGUARDING GENERATIONAL WEALTH THROUGH TRUST LITIGATION & ESTATE SETTLEMENT.",
+    ctaText: "EVALUATE YOUR ESTATE",
+    secondaryText: "About the Firm",
+    secondaryLink: "/about",
     stats: [
-      { icon: Scale, value: '100%', label: 'Fiduciary Accountability' },
-      { icon: ShieldCheck, value: 'Strict', label: 'Client Confidentiality' },
-      { icon: Award, value: '24hr', label: 'Rapid Response' },
+      { icon: Scale, value: "100%", label: "Fiduciary Accountability" },
+      { icon: ShieldCheck, value: "Strict", label: "Client Confidentiality" },
+      { icon: Award, value: "24hr", label: "Rapid Response" },
     ],
   },
 ];
@@ -101,14 +108,14 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             <div
               key={s.id}
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                isActive ? 'opacity-100' : 'opacity-0'
+                isActive ? "opacity-100" : "opacity-0"
               }`}
             >
               <img
                 src={s.image}
                 alt={`Hero slide background ${s.id}`}
                 className={`w-full h-full object-cover object-center grayscale contrast-125 brightness-95 transition-transform duration-7000 ease-out ${
-                  isActive ? 'scale-105' : 'scale-100'
+                  isActive ? "scale-105" : "scale-100"
                 }`}
               />
 
@@ -124,11 +131,11 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 lg:py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 lg:py-16 mt-4 sm:mt-6">
         <div className="max-w-2xl xl:max-w-3xl">
           {/* Main 3-Pillar Headline with smooth animation key */}
           <div key={`headline-${currentSlide}`} className="animate-fade-in">
-            <h1 className="text-[2.75rem] leading-[1.08] sm:text-6xl sm:leading-[1.08] md:text-7xl md:leading-[1.05] lg:text-[5rem] lg:leading-[1.04] font-extrabold text-[#0B2238] tracking-tight mb-7">
+            <h1 className="relative top-4 text-[2.75rem] leading-[1.08] sm:text-6xl sm:leading-[1.08] md:text-7xl md:leading-[1.05] lg:text-[5rem] lg:leading-[1.04] font-extrabold text-[#0B2238] tracking-tight  mb-7">
               {slide.headline.map((word, wIdx) => (
                 <span
                   key={wIdx}
@@ -157,6 +164,7 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             </button>
 
             <Link
+              style={{ display: "none" }}
               to={slide.secondaryLink}
               className="inline-flex items-center justify-center gap-2 bg-white/85 hover:bg-white text-[#0B2238] border border-slate-300/90 hover:border-[#0B2238] font-bold text-sm tracking-wider uppercase px-7 py-3.5 sm:py-4 rounded-full transition-all duration-300 backdrop-blur-xs hover:shadow-sm"
             >

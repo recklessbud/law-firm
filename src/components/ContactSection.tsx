@@ -1,14 +1,28 @@
-import React from 'react';
-import { Phone, MapPin, Clock, Shield, CheckCircle2 } from 'lucide-react';
+import React from "react";
+import { Phone, MapPin, Clock, Shield, CheckCircle2 } from "lucide-react";
+import contactSectionImage from "../assets/contact-section-image.jpg";
 
 interface ContactSectionProps {
   onRequestModal?: () => void;
 }
 
-export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }) => {
+export const ContactSection: React.FC<ContactSectionProps> = ({
+  onRequestModal,
+}) => {
   return (
-    <section id="contact" className="py-20 sm:py-28 bg-[#0B2238] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-slate-900 py-20 sm:py-28 text-white"
+    >
+      <img
+        src={contactSectionImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 bg-[#07192a]/80" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left info */}
           <div className="lg:col-span-6">

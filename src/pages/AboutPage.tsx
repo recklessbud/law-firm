@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Scale, HeartHandshake, ArrowRight } from 'lucide-react';
-import heroBuildingImg from '../assets/hero-building.jpg';
+import heroBuildingImg from '../assets/contact-section-image.jpg';
 
 interface AboutPageProps {
   onOpenContact: () => void;
