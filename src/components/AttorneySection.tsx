@@ -45,7 +45,7 @@ export const AttorneySection: React.FC<AttorneySectionProps> = ({ onContactClick
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-              When family dynamics, substantial wealth, and estate distribution intersect, disputes can threaten both financial security and generational bonds. For over two decades, Thomas. Weaver P.C. has represented beneficiaries, executors, and families navigating contentious probate and trust matters.
+              When family dynamics, substantial wealth, and estate distribution intersect, disputes can threaten both financial security and generational bonds. For over two decades, Thomas. Weaver has represented beneficiaries, executors, and families navigating contentious probate and trust matters.
             </p>
 
             <p className="text-slate-600 text-base leading-relaxed mb-8">

@@ -18,20 +18,31 @@ export const Footer: React.FC = () => {
               <Logo />
             </div>
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
-              Dedicated, partner-level advocacy protecting family legacies, resolving complex inheritance disputes, and guiding families through probate and trust administration.
+              Dedicated, partner-level advocacy protecting family legacies,
+              resolving complex inheritance disputes, and guiding families
+              through probate and trust administration.
             </p>
             <div className="pt-2 flex flex-col gap-2 text-xs">
-              <div className="flex items-center gap-2">
+              <div
+                style={{ display: "none" }}
+                className="flex items-center gap-2"
+              >
                 <Phone className="w-3.5 h-3.5 text-[#187CE7]" />
                 <span className="text-white font-semibold">Direct Call:</span>
-                <a href="tel:+233241234567" className="text-[#187CE7] hover:underline font-bold">
+                <a
+                  href="tel:+233241234567"
+                  className="text-[#187CE7] hover:underline font-bold"
+                >
                   0241234567
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#187CE7]" />
                 <span className="text-white font-semibold">Email:</span>
-                <a href="mailto:weaver.ralexanderfirm@gmail.com" className="text-[#187CE7] hover:underline">
+                <a
+                  href="mailto:weaver.ralexanderfirm@gmail.com"
+                  className="text-[#187CE7] hover:underline"
+                >
                   weaver.ralexanderfirm@gmail.com
                 </a>
               </div>
@@ -50,22 +61,34 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/practice-areas" className="hover:text-white transition-colors">
+                <Link
+                  to="/practice-areas"
+                  className="hover:text-white transition-colors"
+                >
                   Practice Areas
                 </Link>
               </li>
               <li>
-                <Link to="/attorneys" className="hover:text-white transition-colors">
+                <Link
+                  to="/attorneys"
+                  className="hover:text-white transition-colors"
+                >
                   Our Attorneys
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">
+                <Link
+                  to="/about"
+                  className="hover:text-white transition-colors"
+                >
                   About the Firm
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition-colors">
+                <Link
+                  to="/contact"
+                  className="hover:text-white transition-colors"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -79,27 +102,42 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <Link to="/practice-areas" className="hover:text-white transition-colors">
+                <Link
+                  to="/practice-areas"
+                  className="hover:text-white transition-colors"
+                >
                   Will Contests
                 </Link>
               </li>
               <li>
-                <Link to="/practice-areas" className="hover:text-white transition-colors">
+                <Link
+                  to="/practice-areas"
+                  className="hover:text-white transition-colors"
+                >
                   Trust Litigation
                 </Link>
               </li>
               <li>
-                <Link to="/practice-areas" className="hover:text-white transition-colors">
+                <Link
+                  to="/practice-areas"
+                  className="hover:text-white transition-colors"
+                >
                   Probate Administration
                 </Link>
               </li>
               <li>
-                <Link to="/practice-areas" className="hover:text-white transition-colors">
+                <Link
+                  to="/practice-areas"
+                  className="hover:text-white transition-colors"
+                >
                   Beneficiary Rights
                 </Link>
               </li>
               <li>
-                <Link to="/practice-areas" className="hover:text-white transition-colors">
+                <Link
+                  to="/practice-areas"
+                  className="hover:text-white transition-colors"
+                >
                   Estate Planning
                 </Link>
               </li>
@@ -112,12 +150,14 @@ export const Footer: React.FC = () => {
               Office
             </h4>
             <address className="not-italic space-y-2 text-xs text-slate-400">
-              <p className="text-white font-semibold">Thomas Weaver P.C.</p>
+              <p className="text-white font-semibold">
+                Weaver Legal Consult & Associates
+              </p>
               <p className="flex items-start gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#187CE7] flex-shrink-0 mt-0.5" />
                 <span>6C28+VV Antwerp, Belgium</span>
               </p>
-              <p className="pt-1">Phone: 0241234567</p>
+              <p className="pt-1">Phone: +4917616131203</p>
             </address>
           </div>
         </div>
@@ -125,11 +165,15 @@ export const Footer: React.FC = () => {
         {/* Legal Disclaimer & Copyright */}
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <p>
-            © {new Date().getFullYear()} Thomas Weaver P.C. All rights reserved. Attorney Advertising.
+            © {new Date().getFullYear()} Weaver Legal Consult & Associates. All
+            rights reserved. Attorney Advertising.
           </p>
 
           <p className="text-[11px] max-w-xl text-center md:text-right text-slate-500">
-            The information provided on this website does not constitute legal advice and is intended for informational purposes only. No attorney-client relationship is formed until a formal representation agreement is signed.
+            The information provided on this website does not constitute legal
+            advice and is intended for informational purposes only. No
+            attorney-client relationship is formed until a formal representation
+            agreement is signed.
           </p>
 
           <button

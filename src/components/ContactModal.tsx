@@ -232,25 +232,17 @@ export const ContactModal: React.FC<ContactModalProps> = ({
                     <option value="Any Available Partner">
                       Any Available Partner
                     </option>
-                    <option value="David A. Thomas">
-                      David A. Thomas (Managing Partner - Inheritance
-                      Litigation)
-                    </option>
-                    <option value="Sarah M. Jenkins">
-                      Sarah M. Jenkins (Partner - Trust Litigation)
+                    <option value="Richard Alexander Weaver">
+                      Richard Alexander Weaver (Senior Attorney)
                     </option>
                     <option value="Marcus T. Vance">
-                      Marcus T. Vance (Partner - Contested Wills)
-                    </option>
-                    <option value="Elena Rostova">
-                      Elena Rostova (Senior Counsel - Wealth Planning)
+                      Marcus T. Vance (Senior Solicitor - Contested Wills)
                     </option>
                     <option value="Jonathan D. Hayes">
-                      Jonathan D. Hayes (Partner - Probate Administration)
+                      Jonathan D. Hayes (Barrister - Probate Litigation)
                     </option>
                     <option value="Amanda K. Chen">
-                      Amanda K. Chen (Senior Associate - Estate &
-                      Conservatorship)
+                      Amanda K. Chen (Attorney - Estate Planning)
                     </option>
                   </select>
                 </div>
@@ -291,11 +283,11 @@ export const ContactModal: React.FC<ContactModalProps> = ({
             {/* Quick Contact Footer Strip inside modal */}
             <div className="mt-6 pt-5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-600">
               <a
-                href="tel:0241234567"
+                href="tel:4917616131203"
                 className="flex items-center gap-1.5 hover:text-[#187CE7] font-semibold"
               >
                 <Phone className="w-3.5 h-3.5 text-[#187CE7]" />
-                <span>Direct: 0241234567</span>
+                <span>Direct: +4917616131203</span>
               </a>
               <span className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-[#187CE7]" />

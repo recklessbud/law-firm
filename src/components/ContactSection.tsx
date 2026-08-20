@@ -29,7 +29,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
 
             <div className="space-y-4">
               <a
-                href="tel:7203302805"
+                href="tel:+4917616131203"
                 className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-lg bg-[#187CE7] flex items-center justify-center text-white flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -40,7 +40,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onRequestModal }
                     Direct Firm Line
                   </div>
                   <div className="text-lg sm:text-xl font-bold tracking-wide text-white group-hover:text-[#187CE7] transition-colors">
-                    0241234567
+                    +4917616131203
                   </div>
                 </div>
               </a>
